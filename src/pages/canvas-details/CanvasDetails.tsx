@@ -1,9 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const CanvasDetails = (): JSX.Element => {
-  return (
-    <div>I'm canvas detail page</div>
-  )
+  return <div>I'm canvas detail page</div>;
 };
 
 export default CanvasDetails;

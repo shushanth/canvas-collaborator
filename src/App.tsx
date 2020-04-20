@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import PageRoues from "./routes";
+import PageRoues from './routes';
 
 export default (): JSX.Element => (
   <div>

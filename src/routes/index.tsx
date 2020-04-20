@@ -1,9 +1,9 @@
-import React from "react";
-import { Router, Route } from "react-router";
-import { createBrowserHistory } from "history";
+import React from 'react';
+import { Router, Route } from 'react-router';
+import { createBrowserHistory } from 'history';
 
-import CanvasLists from "../pages/canvas-list/CanvasLists";
-import CanvasDetails from "../pages/canvas-details/CanvasDetails";
+import CanvasLists from '../pages/canvas-list/CanvasLists';
+import CanvasDetails from '../pages/canvas-details/CanvasDetails';
 
 const history = createBrowserHistory();
 
