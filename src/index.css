@@ -55,3 +55,8 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+#canvas {
+  width: 100%;
+  height: 100%;
+}

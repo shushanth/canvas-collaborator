@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { BaseColors } from "../../shared/BaseTheme";
+import { BaseColors } from '../../shared/BaseTheme';
 
 const { white, lightGrayWhite, blueDull } = BaseColors;
 

@@ -24,10 +24,7 @@ const apiMiddleWare = (request: apiRequest) => {
     ? `${BASE_URL}${request.url}?${pageParams}`
     : `${BASE_URL}${request.url}`;
   const httpRequestConfig: any = {
-    ['GET']: async ({
-      onSuccess = request.onSuccess,
-      onFailure = request.onFailure,
-    }) => {
+    ['GET']: async ({ onSuccess = request.onSuccess, onFailure = request.onFailure }) => {
       try {
         const response = await axios.get(baseUrl);
         const { data } = response;
@@ -52,6 +49,5 @@ const apiMiddleWare = (request: apiRequest) => {
   return httpRequestConfig[request.method || 'GET'](request);
 };
 export const apiService = {
-  request: (serviceRequest: apiRequest) =>
-    apiMiddleWare(serviceRequest),
+  request: (serviceRequest: apiRequest) => apiMiddleWare(serviceRequest),
 };

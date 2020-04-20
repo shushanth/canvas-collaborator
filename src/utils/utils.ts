@@ -1,5 +1,4 @@
-export const isArrayEmpty = (arr: Array<any> | []) =>
-  !(Array.isArray(arr) && arr.length);
+export const isArrayEmpty = (arr: Array<any> | []) => !(Array.isArray(arr) && arr.length);
 
 export const uuid = () => {
   const s4 = () => {
@@ -7,18 +6,5 @@ export const uuid = () => {
       .toString(16)
       .substring(1);
   };
-  return (
-    s4() +
-    s4() +
-    '-' +
-    s4() +
-    '-' +
-    s4() +
-    '-' +
-    s4() +
-    '-' +
-    s4() +
-    s4() +
-    s4()
-  );
+  return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
 };

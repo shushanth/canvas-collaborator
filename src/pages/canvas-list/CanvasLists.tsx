@@ -5,10 +5,7 @@ import { Link } from 'react-router-dom';
 import { apiService } from '../../utils/apiService';
 import { rootStateModel } from '../../store/reducers/canvasReducer';
 import { isArrayEmpty, uuid } from '../../utils';
-import {
-  fetchCanvasesLists,
-  canvasFetchError,
-} from '../../store/actions/action';
+import { fetchCanvasesLists, canvasFetchError } from '../../store/actions/action';
 import {
   BaseHeaderStyled,
   BaseLoadingStyled,
@@ -28,18 +25,12 @@ interface canvasModel {
 
 const CanvasLists = (): JSX.Element => {
   const dispatch = useDispatch();
-  const canvasesList = useSelector(
-    (state: rootStateModel) => state.canvasesList
-  );
+  const canvasesList = useSelector((state: rootStateModel) => state.canvasesList);
   const canvasError: boolean = useSelector(
     (state: rootStateModel) => state.canvasFetchError
   );
-  const page: number = useSelector(
-    (state: rootStateModel) => state.page
-  );
-  const pageSize: number = useSelector(
-    (state: rootStateModel) => state.pageSize
-  );
+  const page: number = useSelector((state: rootStateModel) => state.page);
+  const pageSize: number = useSelector((state: rootStateModel) => state.pageSize);
 
   const requestCanvasesLists = () => {
     apiService.request({
@@ -64,9 +55,7 @@ const CanvasLists = (): JSX.Element => {
 
   return (
     <CanvasListsStyled>
-      {canvasError && (
-        <BaseErrorStyled>Something went wrong</BaseErrorStyled>
-      )}
+      {canvasError && <BaseErrorStyled>Something went wrong</BaseErrorStyled>}
       <BaseHeaderStyled>Canvases</BaseHeaderStyled>
       {isArrayEmpty(canvasesList) ? (
         <BaseLoadingStyled></BaseLoadingStyled>
@@ -77,9 +66,7 @@ const CanvasLists = (): JSX.Element => {
               <Link key={uuid()} to={`/details/${id}`}>
                 <CanvasListsItemStyled>
                   <CanvasItemIdStyled>{id}</CanvasItemIdStyled>
-                  <CanvasItemTitleStyled>
-                    {title}
-                  </CanvasItemTitleStyled>
+                  <CanvasItemTitleStyled>{title}</CanvasItemTitleStyled>
                 </CanvasListsItemStyled>
               </Link>
             );
