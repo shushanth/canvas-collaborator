@@ -1,0 +1,2 @@
+export const FETCH_CANVASES_LISTS: string = 'FETCH_CANVASES_LISTS';
+export const CANVAS_FETCH_ERROR: string = 'CANVAS_FETCH_ERROR';
