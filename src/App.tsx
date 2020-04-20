@@ -1,12 +1,9 @@
-import React from 'react';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      I'm canvas collab app
-    </div>
-  );
-}
+import PageRoues from "./routes";
 
-export default App;
+export default (): JSX.Element => (
+  <div>
+    <PageRoues />
+  </div>
+);
