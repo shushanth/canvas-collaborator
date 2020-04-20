@@ -1,0 +1,57 @@
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size: 20px;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  overflow: auto;
+}
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  vertical-align: baseline;
+  position: relative;
+}
+
+li,
+ol {
+  list-style: none !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
